@@ -1,0 +1,38 @@
+/*
+färger:
+Titles Grön: #0a846e
+Ta bort-button röd: #b93857
+Brun färg: #9e6d52
+Nav text: #055647
+
+
+fonter:
+Open-Sans: text
+Lato: Rubriker
+Maven Pro: Titel
+*/
+
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcf6fc;
+}
+
+:root {
+  /* == Färgvariabler == */
+  --title-green: #0a846e;
+  --btn-red: #b93857;
+  --brown: #9e6d52;
+  --nav-green: #055647;
+
+  /* ==  Typsnitt == */
+  --font-title: "Maven Pro", sans-serif; /* Titel */
+  --font-heading: "Lato", sans-serif; /* Rubriker */
+  --font-body: "Open Sans", sans-serif; /* Text */
+}
