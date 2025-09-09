@@ -25,7 +25,7 @@ Maven Pro: Titel
   --btn-red: #b93857;
   --brown: #9e6d52;
   --nav-green: #055647;
-  --light-pink:#fcf5fc;
+  --light-pink: #fcf5fc;
 
   /* ==  Typsnitt == */
   --font-title: "Maven Pro", sans-serif; /* Titel */
@@ -36,7 +36,7 @@ Maven Pro: Titel
   --gap: 1rem;
 
   /* == Design == */
-  --box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+  --box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -54,8 +54,7 @@ body {
   height: 100%;
 }
 
-
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-areas:
     "header"
@@ -66,19 +65,28 @@ body {
   gap: var(--gap);
 }
 
-.grid-container h3, 
-.grid-container h4{
+.grid-container h3,
+.grid-container h4 {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   text-align: center;
 }
 
-header { grid-area: header; }
-.new-plant { grid-area: new-plant; }
-.planned-plants { grid-area: planned-plants; }
-.planted-plants { grid-area: planted-plants; }
-footer { grid-area: footer; }
-
+header {
+  grid-area: header;
+}
+.new-plant {
+  grid-area: new-plant;
+}
+.planned-plants {
+  grid-area: planned-plants;
+}
+.planted-plants {
+  grid-area: planted-plants;
+}
+footer {
+  grid-area: footer;
+}
 
 /* == Header ==*/
 
@@ -101,7 +109,7 @@ footer { grid-area: footer; }
 }
 .logo {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -115,6 +123,7 @@ footer { grid-area: footer; }
   position: absolute;
   bottom: 2rem;
   left: 50%;
+  bottom: 4%;
   transform: translateX(-50%);
   color: white;
   z-index: 1;
@@ -125,7 +134,7 @@ footer { grid-area: footer; }
 .main-nav {
   position: absolute;
   z-index: 1;
-  width: auto;
+  width: 100%;
   font-family: var(--font-title);
   font-weight: 500;
   font-size: 20px;
@@ -140,7 +149,7 @@ footer { grid-area: footer; }
   display: inline-block;
 }
 .burger-menu {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 1rem;
   z-index: 3;
@@ -165,7 +174,7 @@ footer { grid-area: footer; }
   max-width: 400px;
 }
 .new-plant label {
-  margin-bottom:-0.75rem ;
+  margin-bottom: -0.75rem;
   font-weight: 200;
 }
 .input-box {
@@ -192,35 +201,40 @@ footer { grid-area: footer; }
   font-weight: 500;
 
   cursor: pointer;
-  
+
   color: white;
   font-size: 1rem;
 }
 
+  #planta2,
+  #datum2,
+  #label-planta2,
+  #label-datum2 {
+    display: none;
+  }
 /* == Listed Plants ==*/
-
 .planned-plants ul,
-.planted-plants ul{
+.planted-plants ul {
   padding: var(--gap);
   display: flex;
   justify-content: start;
   gap: var(--gap);
   list-style: none;
   margin: 0 auto;
-  max-width: 428px;
+  max-width: 500px;
 }
 
 .listed_plant {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 70% 12% 18%;
   grid-template-areas:
-    "img img img"
-    "name name date"
-    "footer delete delete";
+    "img img"
+    "name date"
+    "footer delete";
 
-  width: min(12rem, 100%);
-  height: 15rem;
+  width: clamp(12rem, 20vw, 16rem);
+  height: clamp(15rem, 25vw, 20rem);
   box-shadow: var(--box-shadow);
   position: relative;
 }
@@ -240,7 +254,7 @@ footer { grid-area: footer; }
   transform: translate(-50%, -50%);
   width: 50%;
   height: auto;
-  z-index: 1;
+  z-index: 2;
 }
 .plant-name {
   grid-area: name;
@@ -255,18 +269,20 @@ footer { grid-area: footer; }
 
   white-space: nowrap;
   align-self: end;
-  padding-right: 0.3rem;
+  justify-self: end;
 
+  padding-right: 0.8rem;
   font-size: 0.8rem;
   font-weight: 700;
 }
 .plant-footer {
   grid-area: footer;
 
-  align-self: end;
+  align-self: flex-end;
   justify-self: start;
   color: #333;
   padding: 0.3rem;
+  padding-bottom: 0.6rem;
   white-space: nowrap;
 
   font-size: 0.8rem;
@@ -288,6 +304,9 @@ footer { grid-area: footer; }
   height: 20px;
   display: block;
 }
+.edit-btn {
+  display: none;
+}
 
 /* == Footer ==*/
 
@@ -304,27 +323,28 @@ footer figure {
   margin: 0px;
   padding: var(--gap);
 }
+
 footer figure img {
   opacity: 73%;
-}
-footer figure img {
   width: 100%;
-  max-height: 90px;
+  height: clamp(90px, 20vw, 277px);
   object-fit: cover;
-  display: block;
 }
-footer h5{
+footer h5 {
   font-weight: 300;
   cursor: pointer;
 }
 
-
 @media (min-width: 500px) {
-  body{
+  body {
     max-width: 1000px;
     height: auto;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);;
   }
+
+
+  /* == Navbar ==*/
+
   .main-nav {
     position: fixed;
     width: 100%;
@@ -334,7 +354,7 @@ footer h5{
     justify-content: center;
     align-items: center;
     z-index: 2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: var(--box-shadow);
     padding: 0;
   }
   .burger-menu {
@@ -349,7 +369,6 @@ footer h5{
     margin: 0;
     padding: 0;
   }
-
   .full-menu li a {
     text-decoration: none;
     color: var(--nav-green);
@@ -357,12 +376,139 @@ footer h5{
     font-family: var(--font-title);
   }
 
+  /* == Add new plant ==*/
+
+  .new-plant form {
+    max-width: 100%;
+    padding: 1rem;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "label-planta1 label-datum1"
+      "planta1 datum1"
+      "label-planta2 label-datum2"
+      "planta2 datum2"
+      "submit submit";
+  }
+  .new-plant h2 {
+    grid-area: titel;
+    text-align: left;
+    width: 100%;
+    margin-left: var(--gap);
+  }
+  #planta1 {
+    grid-area: planta1;
+  }
+  #datum1 {
+    grid-area: datum1;
+  }
+  #label-planta2{
+    display: block;
+  }
+    #submit-planta {
+    display: block;
+    grid-area: submit;
+  }
+  /* second forms */
+  #planta2 {
+    display: block;
+    grid-area: planta2;
+  }
+    #label-datum2{
+    display: block;
+  }
+  #datum2 {
+    display: block;
+    grid-area: datum2;
+  }
+
+  /* == ALL Listed Plants ==*/
+
+  .planned-plants ul,
+  .planted-plants ul {
+    max-width: 1000px;
+  }
+  .listed_plant {
+    width: clamp(12rem, 18vw, 16rem);
+    height: clamp(15rem, 23vw, 20rem);
+  }
+  .plant-icon {
+    display: block;
+  }
+  .delete-btn {
+    background-color: var(--btn-red);
+    color: white;
+    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    border-radius: 8px;
+    margin: 0.6rem;
+    margin-top: 0;
+
+    width: 5rem;
+    height: 1.5rem;
+
+    padding-left: clamp(0.2rem, 0.8vw, 0.6rem);
+    padding-right: clamp(0.2rem, 0.8vw, 0.6rem);
+  }
+  .delete-btn img {
+    display: none;
+  }
+  .delete-btn::after {
+    content: "TA BORT";
+  }
+
+  /* == Planned Plants ==*/
+
+  .planned-plants .listed_plant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 70% auto auto auto;
+    grid-template-areas:
+      "img img"
+      "name date"
+      "footer edit"
+      "footer delete";
+
+    width: clamp(12rem, 20vw, 16rem);
+    height: 22rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+  }
+
+  .planned-plants .edit-btn {
+    grid-area: edit;
+
+    display: block;
+    justify-self: flex-end;
+    align-self: center;
+    margin: 0.6rem;
+    margin-bottom: 0rem;
+    padding: 0.4rem;
+
+    width: 5rem;
+    height: 1.5rem;
+
+    background-color: var(--title-green);
+    color: white;
+    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  /* == Footer ==*/
+
   footer figure {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
   footer figure img {
-  opacity: 73%;
-  height: 90px;
+    opacity: 73%;
+    min-height: 90px;
+    object-fit: cover;
   }
 }

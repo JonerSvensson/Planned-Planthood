@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planned Planthood | Min Sida</title>
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Maven+Pro:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2
+                ?family=Lato:wght@300;400;600;700
+                &family=Maven+Pro:wght@400;600;700
+                &family=Open+Sans:wght@400;600;700
+                &display=swap"
       rel="stylesheet"
     />
-    "
   </head>
   <body>
     <div class="grid-container">
@@ -46,13 +49,19 @@
         <h2>Lägg till ny plantering:</h2>
 
         <form action="/add" method="post">
-          <label for="planta">Planta:</label>
-          <input class="input-box" type="text" id="planta" name="planta" />
+          <label id="label-planta1" for="planta1">Planta:</label>
+          <input class="input-box" type="text" id="planta1" name="planta1" />
 
-          <label for="datum">Datum:</label>
-          <input class="input-box" type="text" id="datum" name="datum" />
+          <label id="label-planta2" for="planta2">Planta:</label>
+          <input class="input-box" type="text" id="planta2" name="planta2" />
 
-          <button type="submit">LÄGG TILL</button>
+          <label id="label-datum1" for="datum1">Datum:</label>
+          <input class="input-box" type="text" id="datum1" name="datum1" />
+
+          <label id="label-datum2" for="datum2">Datum:</label>
+          <input class="input-box" type="text" id="datum2" name="datum2" />
+
+          <button id="submit-planta" type="submit">LÄGG TILL</button>
         </form>
       </main>
 
@@ -75,6 +84,8 @@
             <span class="plant-name">Gurka</span>
             <span class="plant-date">15 april 2024</span>
             <span class="plant-footer">Rico Coolio</span>
+
+            <button class="edit-btn">ÄNDRA</button>
 
             <button class="delete-btn">
               <img src="../assets/icons/trashcan.svg" alt="" />
