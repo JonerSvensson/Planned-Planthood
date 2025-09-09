@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
+  <section class="grid-container">
     <!-- HEADER MED HERO BILD -->
-    <header>
+    <header class="container">
       <figure class="hero">
         <img
           class="hero__img"
@@ -33,14 +34,30 @@
         <section class="green--bkg">
           <img class="hero--dig" src="./assets/icons/dig.svg" alt="" aria-hidden="true"/>
         </section>
-      </section>
+     </section>
+              <nav class="main-nav">
+          <!-- Small menu for smaller screens -->
+          <img
+            class="burger-menu"
+            src="../assets/icons/burgir.svg"
+            alt="burger menu"
+          />
+          <!-- Expanded navbar for wider screens -->
+          <ul class="full-menu">
+            <li><a href="#">Planer</a></li>
+            <li><a href="#">Historik</a></li>
+            <li><a href="#">Tips</a></li>
+            <li><a href="#">Logga in</a></li>
+          </ul>
+        </nav>
     </header>
 
     <!-- MAIN MED FLERA CONTENT SECTIONS -->
-    <main>
+    <main class="container">
       <!-- CONTENT FIRST -->
       <article class="intro" aria-labelledby="intro-title">
-        <h1 id="intro-title">Planned Parenthood</h1>
+        <h1 id="intro-title">Planned Planthood</h1>
+         <section class="feature">
         <h2>Säsong att så</h2>
         <p class="intro__text">
           Våren är äntligen här i kollektivet!<br />
@@ -61,6 +78,7 @@
           aria-hidden="true"
         />
       </section>
+     
       <section class="line" aria-hidden="true"></section>
 
       <!-- CONTENT SECOND -->
@@ -105,12 +123,12 @@
             <section class="card__content">
               <header class="card__head">
                 <h4 class="card__title">Tomat</h4>
-                <time class="card__date" datetime="2024-04-15"
-                  >15 april 2024</time
+                <time class="card__date" datetime="2024-04-01"
+                  >1 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Majvor och P-Å</span>
+                <span class="card__note">Jocke</span>
                 <img src="./assets/icons/bin.png" />
               </footer>
             </section>
@@ -128,13 +146,13 @@
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Gurka</h4>
-                <time class="card__date" datetime="2024-04-15"
-                  >15 april 2024</time
+                <h4 class="card__title">Tomat</h4>
+                <time class="card__date" datetime="2024-04-01"
+                  >1 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Rico Coolio</span>
+                <span class="card__note">Majvor och P-Å</span>
                 <img src="./assets/icons/bin.png" />
               </footer>
             </section>
@@ -152,13 +170,13 @@
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Tomat</h4>
+                <h4 class="card__title">Sockerärtor</h4>
                 <time class="card__date" datetime="2024-04-15"
                   >15 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Majvor och P-Å</span>
+                <span class="card__note">Frippe</span>
                 <img src="./assets/icons/bin.png" />
               </footer>
             </section>
@@ -176,13 +194,13 @@
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Gurka</h4>
-                <time class="card__date" datetime="2024-04-15"
-                  >15 april 2024</time
+                <h4 class="card__title">Majrova</h4>
+                <time class="card__date" datetime="2024-04-01"
+                  >1 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Rico Coolio</span>
+                <span class="card__note">Emma på 4an</span>
                 <img src="./assets/icons/bin.png" />
               </footer>
             </section>
@@ -200,13 +218,13 @@
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Tomat</h4>
+                <h4 class="card__title">Squash</h4>
                 <time class="card__date" datetime="2024-04-15"
                   >15 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Majvor och P-Å</span>
+                <span class="card__note">Perra J</span>
                 <img src="./assets/icons/bin.png" />
               </footer>
             </section>
@@ -233,16 +251,17 @@
       </article>
 
       <a class="btn" href="#">Planterade plantor</a>
+
     </main>
-    <footer>
+
+    <!-- FOOTER -->
+    <footer class="container">
       <section class="footer" aria-labelledby="contact-title">
         <img
           class="footer__photo"
           src="./assets/images/handsidan.avif"
           alt="Hand sträcks mot små plantor i jord."
         />
-
-        <!-- stor ikon över överdelen -->
         <img
           class="contact__logo"
           src="./assets/icons/Logo.svg"
@@ -268,5 +287,7 @@
         <a class="to-top" href="">Till toppen av sidan</a>
       </section>
     </footer>
+
+    </section>
   </body>
 </html>
