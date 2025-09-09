@@ -8,21 +8,31 @@
 </head>
 <body>
 
-  <!-- GRID SECTION -->
-  <div class="grid-container">
-    <div class="big">
-      <img src="Images/Hand.jpg" alt="Hand" class="bg">
-      <img src="Icons/Logo.svg" alt="Logo" class="icon">
-    </div>
-    <div class="small1">
-      <img src="Icons/seedling.png" alt="Seedling">
-    </div>
-    <div class="small2">
-      <img src="Icons/dig.png" alt="Dig">
-    </div>
-  </div>
+ <header>
+      <figure class="hero">
+        <img
+          class="hero__img"
+          src="../assets/images/hand.jpeg"
+          alt="Hand som håller en planta."
+        />
+        <img class="hero__icon" src="../assets/icons/Logo.svg" alt="" />
+      </figure>
+      <section class="icons">
+        <section class="brown--bkg">
+          <img
+            class="hero--seedling"
+            src="../assets/icons/seedling.svg"
+            alt=""
+          />
+        </section>
+        <section class="green--bkg">
+          <img class="hero--dig" src="../assets/icons/dig.svg" alt="" />
+        </section>
+      </section>
+    </header>
 
   <!-- NAVIGATION -->
+
   <nav class="navbar">
     <ul>
       <li><a href="#">PLANER</a></li>
@@ -32,49 +42,212 @@
     </ul>
   </nav>
 
+  <main>
   <!-- ARTICLE FLOW BOX -->
-  <section class="article-flow">
-    <h2 class="article-title">PLANNED PLANTHOOD</h2>
 
-    <div class="flow-box">
-      <div class="flow-image">
-        <img src="./Icons/Vectorseedpackage.svg" alt="Plant Image">
-      </div>
-      <div class="flow-text">
-        <h3>Säsong att så</h3>
-        <p>Våren är äntligen här i kollektivet!<br>
-        Lorem ipsum dolor sit amet consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet netus amet eu elit.</p>
-        <button class="flow-button">SÅ-TIPS</button>
-      </div>
-    </div>
-  </section>
-  
-  <section class="article-menu">
-    <section class="artical-menu-items">
-        <section class="Section1">
-            
-  <!-- Images row -->
-  <header class="menu-images">
-    <figure>
-        <img src="./Images/Tomat.png" alt="Example 1">
-
-    </figure>
-  </header>
-
-  <!-- Texts row -->
-  <section class="menu-content">
-    <main class="menu-left">
-      <p><strong>Gurka</strong><br>Rico Coolio</p>
-    </main>
-    <aside class="menu-right">
-      <p><strong>15 april 2024</strong></p>
-      <button class="menu-button">TA BORT</button>
-    </aside>
-  </section>
+   <article class="intro">
+        <h1>Planned Parenthood</h1>
+        <section class="flow-text">
+          <h2>Säsong att så</h2>
+          <p class="intro__text">
+            Våren är äntligen här i kollektivet!<br />
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+            blanditiis, earum assumenda voluptatibus quaerat sunt nulla modi
+            laudantium?
+          </p>
+          <a class="btn" href="#">Så-tips</a>
         </section>
+     
+          <!-- Vector -->
+          <section class="green-circle">
+            <img
+              class="green-vector"
+              src="../assets/icons/Vectorseedpackage.svg"
+              alt=""
+            />
+          </section>
+          <section class="line"></section>
+      </article>
+     
+      
 
-    </section>
+        <!-- CONTENT SECOND -->
+        <h3>Våra planerade planteringar:</h3>
+        <!-- Cards -->
+        <section class="section" aria-labelledby="planned-title">
+          <section class="cards">
+            <!-- Card #1 -->
+            <article class="card">
+              <figure class="card__media">
+                <img
+                  class="card__photo"
+                  src="../assets/images/gurka.avif"
+                  alt="Gurka i odlingsbädd med gul blomma."
+                />
+                <img class="card__icon" src="../assets/icons/plant.svg" />
+              </figure>
+              <section class="card__content">
+                <header class="card__head">
+                  <h4 class="card__title">Gurka</h4>
+                  <time class="card__date" datetime="2024-04-15"
+                    >15 april 2024</time
+                  >
+                </header>
+                <footer class="card__foot">
+                  <span class="card__note">Rico Coolio</span>
+                  <img src="../assets/icons/bin.png" />
+                </footer>
+              </section>
+            </article>
   
-  </section>
-</body>
-</html>
+            <!-- Card #2 -->
+            <article class="card">
+              <figure class="card__media">
+                <img
+                  class="card__photo"
+                  src="../assets/images/tomater.avif"
+                  alt="Gurka i odlingsbädd med gul blomma."
+                />
+                <img class="card__icon" src="../assets/icons/plant.svg" />
+              </figure>
+              <section class="card__content">
+                <header class="card__head">
+                  <h4 class="card__title">Tomat</h4>
+                  <time class="card__date" datetime="2024-04-15"
+                    >15 april 2024</time
+                  >
+                </header>
+                <footer class="card__foot">
+                  <span class="card__note">Majvor och P-Å</span>
+                  <img src="../assets/icons/bin.png" />
+                </footer>
+              </section>
+            </article>
+  
+            <!-- Card #3 -->
+            <article class="card">
+              <figure class="card__media">
+                <img
+                  class="card__photo"
+                  src="../assets/images/tomat.avif"
+                  alt="Gurka i odlingsbädd med gul blomma."
+                />
+                <img class="card__icon" src="../assets/icons/plant.svg" />
+              </figure>
+              <section class="card__content">
+                <header class="card__head">
+                  <h4 class="card__title">Gurka</h4>
+                  <time class="card__date" datetime="2024-04-15"
+                    >15 april 2024</time
+                  >
+                </header>
+                <footer class="card__foot">
+                  <span class="card__note">Rico Coolio</span>
+                  <img src="../assets/icons/bin.png" />
+                </footer>
+              </section>
+            </article>
+  
+            <!-- Card #4 -->
+            <article class="card">
+              <figure class="card__media">
+                <img
+                  class="card__photo"
+                  src="../assets/images/ärta.avif"
+                  alt="Gurka i odlingsbädd med gul blomma."
+                />
+                <img class="card__icon" src="../assets/icons/plant.svg" />
+              </figure>
+              <section class="card__content">
+                <header class="card__head">
+                  <h4 class="card__title">Tomat</h4>
+                  <time class="card__date" datetime="2024-04-15"
+                    >15 april 2024</time
+                  >
+                </header>
+                <footer class="card__foot">
+                  <span class="card__note">Majvor och P-Å</span>
+                  <img src="../assets/icons/bin.png" />
+                </footer>
+              </section>
+            </article>
+  
+            <!-- Card #5 -->
+            <article class="card">
+              <figure class="card__media">
+                <img
+                  class="card__photo"
+                  src="../assets/images/lilagrönsak.avif"
+                  alt="Gurka i odlingsbädd med gul blomma."
+                />
+                <img class="card__icon" src="../assets/icons/plant.svg" />
+              </figure>
+              <section class="card__content">
+                <header class="card__head">
+                  <h4 class="card__title">Gurka</h4>
+                  <time class="card__date" datetime="2024-04-15"
+                    >15 april 2024</time
+                  >
+                </header>
+                <footer class="card__foot">
+                  <span class="card__note">Rico Coolio</span>
+                  <img src="../assets/icons/bin.png" />
+                </footer>
+              </section>
+            </article>
+  
+            <!-- Card #6 -->
+            <article class="card">
+              <figure class="card__media">
+                <img
+                  class="card__photo"
+                  src="../assets/images/cloesupväxt.avif"
+                  alt="Gurka i odlingsbädd med gul blomma."
+                />
+                <img class="card__icon" src="../assets/icons/plant.svg" />
+              </figure>
+              <section class="card__content">
+                <header class="card__head">
+                  <h4 class="card__title">Tomat</h4>
+                  <time class="card__date" datetime="2024-04-15"
+                    >15 april 2024</time
+                  >
+                </header>
+                <footer class="card__foot">
+                  <span class="card__note">Majvor och P-Å</span>
+                  <img src="../assets/icons/bin.png" />
+                </footer>
+              </section>
+            </article>
+          </section>
+        </section>
+  
+        <a class="btn" href="#">Visa fler</a>
+  
+        <!-- Vector -->
+        <section class="green-circle">
+          <img class="green-vector" src="../assets/icons/plant.svg" alt="" />
+        </section>
+  
+        <!-- CONTENT THIRD -->
+        <article class="intro">
+          <h2>Våra tidigare odlingar</h2>
+          <p class="intro__text">
+            Våren är äntligen här i kollektivet!<br />
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+            blanditiis, earum assumenda voluptatibus quaerat sunt nulla modi
+            laudantium?
+          </p>
+        </article>
+  
+        <a class="btn" href="#">Planterade plantor</a>
+  
+        <figure class="footer__media">
+          <img class="footer__photo" src="../assets/images/handsidan.avif" />
+        </figure>
+      </main>
+  
+      <!-- Footer -->
+    </body>
+  </html>
+  
