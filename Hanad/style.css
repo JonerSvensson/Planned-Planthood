@@ -573,8 +573,117 @@ footer.container {
     padding: 0 1rem;
   }
 
+<<<<<<< HEAD
   .btn {
     background-color: var(--title-green);
+=======
+  .article-title {
+
+      color: #0A846E;
+      font-family: Maven Pro;
+font-weight: 500;
+font-style: Medium;
+font-size: 48px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+width: 573;
+height: 29;
+top: 636px;
+left: 213px;
+
+
+  }
+
+  .flow-box {
+    display: flex;
+    background: #fff;
+    padding: 16px 8px 8px 16px;
+  margin: auto;
+
+
+    align-items: flex-start;
+    width: 911px;
+height: 377px;
+top: 746px;
+left: 48px;
+
+
+
+  }
+
+  /* IMAGE CONTAINER */
+.flow-image {
+    flex: 0 0 50%;                /* take 30% width, don’t grow/shrink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  /* CIRCULAR IMAGE */
+  .flow-image img {
+    width: 100%;
+    max-width: 377px;             /* never get bigger than 300px */
+    aspect-ratio: 1/1;            /* keep square */
+    object-fit: cover;            /* crop nicely */
+    border-radius: 50%;           /* perfect circle */
+    border: 14px solid #0A846E;   /* green border */
+    background: #0A846E;          /* fallback background */
+  }
+
+  .flow-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ;
+  }
+
+  .flow-text h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: Open Sans;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+
+  .flow-text p {
+    
+
+      width: 467px;
+height: 71px;
+top: 899px;
+left: 492px;
+font-style: normal;
+
+
+
+      font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+
+    color:  #000000;
+  }
+
+  .flow-button {
+  
+    padding: 10px 0;
+    background: #0A846E;
+
+>>>>>>> 137fcd273ed83fe0e3c04c0d28ec4ac25869baf4
     color: #fff;
     font-family: var(--font-body);
     font-weight: 700;

@@ -12,39 +12,52 @@
                 &display=swap"
       rel="stylesheet"
     />
-    "
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
+  <section class="grid-container">
     <!-- HEADER MED HERO BILD -->
-    <header>
+    <header class="container">
       <figure class="hero">
         <img
           class="hero__img"
-          src="../assets/images/hand.jpeg"
+          src="./assets/images/hand.jpeg"
           alt="Hand som håller en planta."
         />
-        <img class="hero__icon" src=".../assets/icons/Logo.svg" alt="" />
+        <img class="hero__icon" src="./assets/icons/Logo.svg" alt="" aria-hidden="true"/>
       </figure>
-      <section class="icons">
+
+      <section class="icons" aria-label="Ikonrutor">
         <section class="brown--bkg">
-          <img
-            class="hero--seedling"
-            src="../assets/icons/seedling.svg"
-            alt=""
-          />
+          <img class="hero--seedling" src="./assets/icons/seedling.svg" alt="" aria-hidden="true"/>
         </section>
         <section class="green--bkg">
-          <img class="hero--dig" src="../assets/icons/dig.svg" alt="" />
+          <img class="hero--dig" src="./assets/icons/dig.svg" alt="" aria-hidden="true"/>
         </section>
-      </section>
+     </section>
+              <nav class="main-nav">
+          <!-- Small menu for smaller screens -->
+          <img
+            class="burger-menu"
+            src="../assets/icons/burgir.svg"
+            alt="burger menu"
+          />
+          <!-- Expanded navbar for wider screens -->
+          <ul class="full-menu">
+            <li><a href="#">Planer</a></li>
+            <li><a href="#">Historik</a></li>
+            <li><a href="#">Tips</a></li>
+            <li><a href="#">Logga in</a></li>
+          </ul>
+        </nav>
     </header>
 
     <!-- MAIN MED FLERA CONTENT SECTIONS -->
-    <main>
+    <main class="container">
       <!-- CONTENT FIRST -->
-      <article class="intro">
-        <h1>Planned Parenthood</h1>
+      <article class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">Planned Planthood</h1>
+         <section class="feature">
         <h2>Säsong att så</h2>
         <p class="intro__text">
           Våren är äntligen här i kollektivet!<br />
@@ -57,29 +70,31 @@
       <a class="btn" href="#">Så-tips</a>
 
       <!-- Vector -->
-      <section class="green-circle">
+      <section class="green-circle" aria-hidden="true">
         <img
           class="green-vector"
-          src="../assets/icons/Vectorseedpackage.svg"
+          src="./assets/icons/Vectorseedpackage.svg"
           alt=""
+          aria-hidden="true"
         />
       </section>
-      <section class="line"></section>
+     
+      <section class="line" aria-hidden="true"></section>
 
       <!-- CONTENT SECOND -->
-      <h3>Våra planerade planteringar:</h3>
+      <h3 id="planned-title">Våra planerade planteringar:</h3>
       <!-- Cards -->
       <section class="section" aria-labelledby="planned-title">
-        <section class="cards">
+        <section class="cards" role="list">
           <!-- Card #1 -->
-          <article class="card">
+          <article class="card" role="listitem">
             <figure class="card__media">
               <img
                 class="card__photo"
-                src="../assets/images/gurka.avif"
+                src="./assets/images/gurka.avif"
                 alt="Gurka i odlingsbädd med gul blomma."
               />
-              <img class="card__icon" src="../assets/icons/plant.svg" />
+              <img class="card__icon" src="./assets/icons/plant.svg" aria-hidden="true"/>
             </figure>
             <section class="card__content">
               <header class="card__head">
@@ -90,127 +105,127 @@
               </header>
               <footer class="card__foot">
                 <span class="card__note">Rico Coolio</span>
-                <img src="../assets/icons/bin.png" />
+                <img src="./assets/icons/bin.png" />
               </footer>
             </section>
           </article>
 
           <!-- Card #2 -->
-          <article class="card">
+          <article class="card" role="listitem">
             <figure class="card__media">
               <img
                 class="card__photo"
-                src="../assets/images/tomater.avif"
-                alt="Gurka i odlingsbädd med gul blomma."
+                src="./assets/images/tomater.avif"
+                alt="Röda och gula tomater på kvist, närbild."
               />
-              <img class="card__icon" src="../assets/icons/plant.svg" />
+              <img class="card__icon" src="./assets/icons/plant.svg" aria-hidden="true"/>
             </figure>
             <section class="card__content">
               <header class="card__head">
                 <h4 class="card__title">Tomat</h4>
-                <time class="card__date" datetime="2024-04-15"
-                  >15 april 2024</time
+                <time class="card__date" datetime="2024-04-01"
+                  >1 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Majvor och P-Å</span>
-                <img src="../assets/icons/bin.png" />
+                <span class="card__note">Jocke</span>
+                <img src="./assets/icons/bin.png" />
               </footer>
             </section>
           </article>
 
           <!-- Card #3 -->
-          <article class="card">
+          <article class="card" role="listitem">
             <figure class="card__media">
               <img
                 class="card__photo"
-                src="../assets/images/tomat.avif"
-                alt="Gurka i odlingsbädd med gul blomma."
+                src="./assets/images/tomat.avif"
+                alt="Två röda körsbärstomater bland gröna blad, suddig bakgrund."
               />
-              <img class="card__icon" src="../assets/icons/plant.svg" />
+              <img class="card__icon" src="./assets/icons/plant.svg" aria-hidden="true"/>
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Gurka</h4>
-                <time class="card__date" datetime="2024-04-15"
-                  >15 april 2024</time
+                <h4 class="card__title">Tomat</h4>
+                <time class="card__date" datetime="2024-04-01"
+                  >1 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Rico Coolio</span>
-                <img src="../assets/icons/bin.png" />
+                <span class="card__note">Majvor och P-Å</span>
+                <img src="./assets/icons/bin.png" />
               </footer>
             </section>
           </article>
 
           <!-- Card #4 -->
-          <article class="card">
+          <article class="card" role="listitem">
             <figure class="card__media">
               <img
                 class="card__photo"
-                src="../assets/images/ärta.avif"
-                alt="Gurka i odlingsbädd med gul blomma."
+                src="./assets/images/ärta.avif"
+                alt="Gröna ärtskidor hängande på rankan."
               />
-              <img class="card__icon" src="../assets/icons/plant.svg" />
+              <img class="card__icon" src="./assets/icons/plant.svg" aria-hidden="true"/>
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Tomat</h4>
+                <h4 class="card__title">Sockerärtor</h4>
                 <time class="card__date" datetime="2024-04-15"
                   >15 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Majvor och P-Å</span>
-                <img src="../assets/icons/bin.png" />
+                <span class="card__note">Frippe</span>
+                <img src="./assets/icons/bin.png" />
               </footer>
             </section>
           </article>
 
           <!-- Card #5 -->
-          <article class="card">
+          <article class="card" role="listitem">
             <figure class="card__media">
               <img
                 class="card__photo"
-                src="../assets/images/lilagrönsak.avif"
-                alt="Gurka i odlingsbädd med gul blomma."
+                src="./assets/images/lilagrönsak.avif"
+                alt="Vit-lila majrovor samlade i en trälåda."
               />
-              <img class="card__icon" src="../assets/icons/plant.svg" />
+              <img class="card__icon" src="./assets/icons/plant.svg" aria-hidden="true"/>
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Gurka</h4>
-                <time class="card__date" datetime="2024-04-15"
-                  >15 april 2024</time
+                <h4 class="card__title">Majrova</h4>
+                <time class="card__date" datetime="2024-04-01"
+                  >1 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Rico Coolio</span>
-                <img src="../assets/icons/bin.png" />
+                <span class="card__note">Emma på 4an</span>
+                <img src="./assets/icons/bin.png" />
               </footer>
             </section>
           </article>
 
           <!-- Card #6 -->
-          <article class="card">
+          <article class="card" role="listitem">
             <figure class="card__media">
               <img
                 class="card__photo"
-                src="../assets/images/cloesupväxt.avif"
-                alt="Gurka i odlingsbädd med gul blomma."
+                src="./assets/images/cloesupväxt.avif"
+                alt="Ung gurk-/squashfrukt på ranka vid spaljé med gul blomma."
               />
-              <img class="card__icon" src="../assets/icons/plant.svg" />
+              <img class="card__icon" src="./assets/icons/plant.svg" aria-hidden="true"/>
             </figure>
             <section class="card__content">
               <header class="card__head">
-                <h4 class="card__title">Tomat</h4>
+                <h4 class="card__title">Squash</h4>
                 <time class="card__date" datetime="2024-04-15"
                   >15 april 2024</time
                 >
               </header>
               <footer class="card__foot">
-                <span class="card__note">Majvor och P-Å</span>
-                <img src="../assets/icons/bin.png" />
+                <span class="card__note">Perra J</span>
+                <img src="./assets/icons/bin.png" />
               </footer>
             </section>
           </article>
@@ -221,7 +236,7 @@
 
       <!-- Vector -->
       <section class="green-circle">
-        <img class="green-vector" src="../assets/icons/plant.svg" alt="" />
+        <img class="green-vector" src="./assets/icons/plant.svg" alt="" />
       </section>
 
       <!-- CONTENT THIRD -->
@@ -237,11 +252,42 @@
 
       <a class="btn" href="#">Planterade plantor</a>
 
-      <figure class="footer__media">
-        <img class="footer__photo" src="../assets/images/handsidan.avif" />
-      </figure>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
+    <footer class="container">
+      <section class="footer" aria-labelledby="contact-title">
+        <img
+          class="footer__photo"
+          src="./assets/images/handsidan.avif"
+          alt="Hand sträcks mot små plantor i jord."
+        />
+        <img
+          class="contact__logo"
+          src="./assets/icons/Logo.svg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <h2 id="contact-title" class="contact__title">Vi hörs!</h2>
+
+        <address class="contact__info">
+          <a class="contact__link" href="tel:0701234567"
+            ><img class="contact__icon" src="./assets/icons/telephone.svg" />
+            0701-234567</a
+          >
+          <a class="contact__link" href="mailto:mail@mail.se">
+            mail@mail.se<img
+              class="contact__icon"
+              src="./assets/icons/envelope.svg"
+          /></a>
+        </address>
+      </section>
+      <section class="scroll-up">
+        <a class="to-top" href="">Till toppen av sidan</a>
+      </section>
+    </footer>
+
+    </section>
   </body>
 </html>
