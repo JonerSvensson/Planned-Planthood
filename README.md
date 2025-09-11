@@ -10,7 +10,7 @@ Webbplatsen innehåller dessutom korta, handfasta så-tips som hjälper både ny
 
 ## Tekniker som använts
 
-- HTML: Semantik, struktur
+- HTML: Semantik, struktur, BEM
 - CSS: Layout, responsivitet
   -flexbox, grid & clamps
 
