@@ -30,20 +30,17 @@ figure {
   --nav-green: #055647;
 
   /* ==  Typography == */
-  --font-title: "Maven Pro", sans-serif;              /* Titel */
-  --font-heading: "Lato", sans-serif;                 /* Rubriker */
-  --font-body: "Open Sans", sans-serif;               /* Text */
+  --font-title: "Maven Pro", sans-serif;          /* Titel */
+  --font-heading: "Lato", sans-serif;             /* Rubriker */
+  --font-body: "Open Sans", sans-serif;           /* Text */
 
   /* == Scaling (mobile→desktop) == */
-  --fs-title: clamp(1.5rem, 1.1rem + 2vw, 3rem);      /* 24-48 */
-  --fs-heading: clamp(1rem, 3vw, 2rem);               /* 16-32 */
-  --fs-body: clamp(0.875rem, 1.5vw, 1rem);            /* 14-16 */
-  --fs-btn: clamp(1rem, 2.4vw, 1.5rem);               /* 16-24 */
-  --fs-cardtitle: clamp(0.875rem, 2.5vw, 1.5rem);     /* 14-24 */
-  --fs-date: clamp(0.625rem, 2vw, 1rem);              /* 10-16 */
-  --fs-footlarge: clamp(2rem, 1rem + 4.8vw, 4rem);    /* 32-64 */
-  --fs-footnote: clamp(0.75rem, 2vw, 1.25rem);        /* 12-20 */
-  --fs-totop: clamp(0.75rem, 0.5rem + 1.2vw, 1.5rem)  /* 12-24 */
+  --fs-title: clamp(1.5rem, 1.1rem + 2vw, 3rem);  /* 24→48 */
+  --fs-heading: clamp(1rem, 3vw, 2rem);           /* 16-32 */
+  --fs-body: clamp(0.875rem, 1.5vw, 1rem);        /* 14-16 */
+  --fs-btn: clamp(1rem, 2.4vw, 1.5rem);           /* 16-24 */
+  --fs-cardtitle: clamp(0.875rem, 2.5vw, 1.5rem); /* 14-24 */
+  --fs-date: clamp(0.625rem, 2vw, 1rem);          /* 10-16 */
 
   /* == Grid base == */
   --gap: 16px;
@@ -190,7 +187,6 @@ h2 {
 .feature-second .btn {
   text-transform: none;
 }
-
 .line {
   width: 202px;
   height: 3px;
@@ -208,12 +204,13 @@ h3 {
 .planned-plants ul,
 .planted-plants ul {
   display: grid;
-  grid-template-columns: repeat(2, var(--card-w));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gap);
   justify-content: center;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 100%;
   max-width: calc(var(--card-w) * 2 + var(--gap));
   margin-inline: auto;
 }
@@ -253,19 +250,19 @@ h3 {
 .plant-name {
   grid-area: name;
   align-self: center;
-  font-size: var(--fs-cardtitle);
-  font-family: var(--font-heading);
-  font-weight: 600;
   padding-left: 0.8rem; 
   margin: 0;
+  font-weight: 600;
+  font-size: var(--fs-cardtitle);
+  font-family: var(--font-heading);
 }
 .plant-date {
   grid-area: date;
   align-self: center;
   justify-self: end;
   font-size: var(--fs-date);
-  font-family: var(--font-body);
   font-weight: 700;
+  font-family: var(--font-body);
   padding-right: 0.8rem;
 }
 .plant-footer {
@@ -286,6 +283,8 @@ h3 {
   background: transparent;
   border: none;
   cursor: pointer;
+
+  font-weight: 300;
 }
 .delete-btn img {
   width: 14px;
@@ -299,15 +298,19 @@ footer {
 }
 .footer__photo {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 30%;
   display: block;
 }
 .footer {
   position: relative;
   aspect-ratio: 390 / 774;
   width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
   max-height: 744px;
 }
 .footer::after {
@@ -338,7 +341,7 @@ footer {
   bottom: 20%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: clamp(2rem, 1rem + 4.8vw, 4rem);
+  font-size: 32px;
   font-weight: 500;
   text-align: center;
   font-family: var(--font-title);
@@ -425,7 +428,7 @@ footer a:visited {
   }
   .grid-container {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
-                0 12px 24px rgba(0, 0, 0, 0.08);
+      /* tunn “border” */ 0 12px 24px rgba(0, 0, 0, 0.08); /* mjuk yttre skugga */
   }
 
   /*== HEADER MEDIA == */
@@ -503,7 +506,7 @@ footer a:visited {
 
   .feature__content-first {
     display: grid;
-    grid-template-columns: clamp(240px, 32vw, 380px) 1fr;
+    grid-template-columns: clamp(240px, 32vw, 380px) 1fr; /* cirkel | text */
     column-gap: clamp(24px, 5vw, 64px);
     align-items: center;
     justify-items: start;
@@ -563,7 +566,7 @@ footer a:visited {
     border-radius: 10px;
     text-decoration: none;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06),
-                0 3px 3px rgba(0, 0, 0, 0.24);
+      /* tunn kant/border-känsla */ 0 3px 3px rgba(0, 0, 0, 0.24);
     cursor: pointer;
     margin: 0.5rem 0;
   }

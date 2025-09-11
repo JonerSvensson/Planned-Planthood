@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="./css/index_style.css" />
   </head>
   <body>
-    <section class="grid-container">
-      <!-- HEADER MED HERO BILD -->
+    <!-- Grid that contains the whole page "header" | "new-plant" | "planned-plants" | "planted-plants" | "footer" -->
+    <div class="grid-container">
+      <!-- Navbar & header picture/logo -->
       <header class="container">
         <div class="top-media">
           <figure class="hero">
@@ -32,7 +33,6 @@
               aria-hidden="true"
             />
           </figure>
-
           <section class="icons" aria-label="Ikonrutor">
             <section class="brown--bkg">
               <img
@@ -52,13 +52,15 @@
             </section>
           </section>
         </div>
+
         <nav class="main-nav">
-          <!-- Small menu for smaller screens -->
+          <!-- Hamburger menu for smaller screens -->
           <img
             class="burger-menu"
             src="../assets/icons/burgir.svg"
             alt="burger menu"
           />
+
           <!-- Expanded navbar for wider screens -->
           <ul class="full-menu">
             <li><a href="#">Planer</a></li>
@@ -69,13 +71,13 @@
         </nav>
       </header>
 
-      <!-- MAIN MED FLERA CONTENT SECTIONS -->
+      <!-- Main with three content blocks + footer -->
       <main class="container">
+        <!-- First content block -->
         <section class="flow-box-first">
           <article class="intro" aria-labelledby="intro-title">
             <h1 id="intro-title">Planned Planthood</h1>
           </article>
-
           <section class="feature-first" aria-labelledby="feature-title">
             <div class="feature__content-first">
               <h2 id="feature__title-first">Säsong att så</h2>
@@ -86,6 +88,7 @@
                 laudantium?
               </p>
               <a class="btn" href="#">Så-tips</a>
+
               <figure class="green-circle" aria-hidden="true">
                 <img
                   class="green-vector"
@@ -100,10 +103,10 @@
 
         <section class="line" aria-hidden="true"></section>
 
-        <!-- CONTENT SECOND -->
+        <!-- Second content block -->
         <h3 id="planned-title">Våra planerade planteringar:</h3>
 
-        <!-- Cards -->
+        <!-- Cards for planned plants -->
         <nav class="planted-plants">
           <ul>
             <!-- Card #1 -->
@@ -217,6 +220,7 @@
 
         <a class="btn" id="no-cap" href="#">Visa fler</a>
 
+        <!-- Third content block -->
         <section class="flow-box-second">
           <section class="feature-second" aria-labelledby="feature-title">
             <div class="feature__content-second">
@@ -241,7 +245,7 @@
         </section>
       </main>
 
-      <!-- FOOTER -->
+      <!-- Footer with image and contact information -->
       <footer class="container">
         <section class="footer" aria-labelledby="contact-title">
           <img
@@ -270,10 +274,12 @@
             /></a>
           </address>
         </section>
+
+        <!-- Scroll-to-top link (for now link to mypage.html) -->
         <section class="scroll-up">
           <a class="to-top" href="">Till toppen av sidan</a>
         </section>
       </footer>
-    </section>
+    </div>
   </body>
 </html>
