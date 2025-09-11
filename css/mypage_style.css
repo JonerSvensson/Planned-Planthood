@@ -345,6 +345,7 @@ label[for="datum2"] {
   .nav {
     position: fixed;
     height: 60px;
+    width: min(1000px, 100%);
     background-color: white;
     display: flex;
     justify-content: center;

@@ -14,13 +14,13 @@
     />
     <link rel="stylesheet" href="./css/index_style.css" />
   </head>
+
   <body>
-    <!-- Grid that contains the whole page "header" | "new-plant" | "planned-plants" | "planted-plants" | "footer" -->
-    <div class="grid-container">
-      <!-- Navbar & header picture/logo -->
+    <div class="page">
+      <!-- HEADER -->
       <header class="container">
-        <div class="top-media">
-          <figure class="hero">
+        <div class="hero">
+          <figure class="hero__media">
             <img
               class="hero__img"
               src="./assets/images/hand.jpeg"
@@ -33,36 +33,35 @@
               aria-hidden="true"
             />
           </figure>
-          <section class="icons" aria-label="Ikonrutor">
-            <section class="brown--bkg">
+          <div class="hero__icons" aria-hidden="true">
+            <div class="hero__icon-box--brown">
               <img
-                class="hero--seedling"
+                class="hero__icon-seedling"
                 src="./assets/icons/seedling.svg"
                 alt=""
                 aria-hidden="true"
               />
-            </section>
-            <section class="green--bkg">
+            </div>
+            <div class="hero__icon-box--green">
               <img
-                class="hero--dig"
+                class="hero__icon-dig"
                 src="./assets/icons/dig.svg"
                 alt=""
                 aria-hidden="true"
               />
-            </section>
-          </section>
+            </div>
+          </div>
         </div>
 
-        <nav class="main-nav">
-          <!-- Hamburger menu for smaller screens -->
-          <img
-            class="burger-menu"
-            src="../assets/icons/burgir.svg"
-            alt="burger menu"
-          />
+        <!-- NAVIGATION -->
+        <nav class="nav" aria-label="Huvudmeny">
+          <!-- Burger menu for smaller screens -->
+          <button class="nav__toggle" aria-controls="main-menu" aria-expanded="false">
+            <img src="./assets/icons/burgir.svg" alt="" aria-hidden="true" />
+          </button>
 
           <!-- Expanded navbar for wider screens -->
-          <ul class="full-menu">
+          <ul id="main-menu" class="nav__list">
             <li><a href="#">Planer</a></li>
             <li><a href="#">Historik</a></li>
             <li><a href="#">Tips</a></li>
@@ -71,214 +70,273 @@
         </nav>
       </header>
 
-      <!-- Main with three content blocks + footer -->
+      <!-- MAIN -->
       <main class="container">
-        <!-- First content block -->
-        <section class="flow-box-first">
-          <article class="intro" aria-labelledby="intro-title">
-            <h1 id="intro-title">Planned Planthood</h1>
-          </article>
-          <section class="feature-first" aria-labelledby="feature-title">
-            <div class="feature__content-first">
-              <h2 id="feature__title-first">Säsong att så</h2>
-              <p class="intro__text">
-                Våren är äntligen här i kollektivet!<br />
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-                blanditiis, earum assumenda voluptatibus quaerat sunt nulla modi
-                laudantium?
-              </p>
-              <a class="btn" href="#">Så-tips</a>
+        <!-- Content #1 -->
+        <h1>Planned Planthood</h1>
+        <section class="feature-first">
+          <div class="feature__content-first">
+            <h2>Säsong att så</h2>
+            <p class="feature__text">
+              Våren är äntligen här i kollektivet!<br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+              blanditiis, earum assumenda voluptatibus quaerat sunt nulla modi
+              laudantium?
+            </p>
+            <a class="button" href="#">Så-tips</a>
 
-              <figure class="green-circle" aria-hidden="true">
-                <img
-                  class="green-vector"
-                  src="./assets/icons/Vectorseedpackage.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </figure>
-            </div>
-          </section>
+            <figure class="feature__circle" aria-hidden="true">
+              <img
+                class="feature__circle-icon"
+                src="./assets/icons/Vectorseedpackage.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </figure>
+          </div>
         </section>
 
-        <section class="line" aria-hidden="true"></section>
+        <hr class="divider" aria-hidden="true" />
 
-        <!-- Second content block -->
-        <h3 id="planned-title">Våra planerade planteringar:</h3>
+        <!-- Planned plants -->
+        <h3>Våra planerade planteringar:</h3>
 
         <!-- Cards for planned plants -->
-        <nav class="planted-plants">
+        <section class="plant-list--planned">
           <ul>
             <!-- Card #1 -->
-            <li class="listed_plant">
+            <li class="plant-card">
               <img
-                class="plant-img"
-                src="../assets/images/gurka.avif"
+                class="plant-card__img"
+                src="./assets/images/gurka.avif"
                 alt="Gurka i odlingsbädd med gul blomma."
               />
-              <img class="plant-icon" src="../assets/icons/plant.svg" alt="" />
+              <img
+                class="plant-card__icon"
+                src="./assets/icons/plant.svg"
+                alt=""
+              />
 
-              <span class="plant-name">Gurka</span>
-              <span class="plant-date">15 april 2024</span>
-              <span class="plant-footer">Rico Coolio</span>
+              <h3 class="plant-card__name">Gurka</h3>
+              <time class="plant-card__date" datetime="2024-04-15"
+                >15 april 2024</time
+              >
+              <span class="plant-card__owner">Rico Coolio</span>
 
-              <button class="delete-btn">
-                <img src="./assets/icons/bin.png" alt="" />
+              <button
+                class="plant-card__delete"
+                type="button"
+                aria-label="Ta bort Gurka"
+              >
+                <img src="./assets/icons/bin.png" alt=""  aria-hidden="true"/>
               </button>
             </li>
             <!-- Card #2 -->
-            <li class="listed_plant">
+            <li class="plant-card">
               <img
-                class="plant-img"
+                class="plant-card__img"
                 src="./assets/images/tomater.avif"
                 alt="Röda och gula tomater på kvist, närbild."
               />
-              <img class="plant-icon" src="../assets/icons/plant.svg" alt="" />
+              <img
+                class="plant-card__icon"
+                src="./assets/icons/plant.svg"
+                alt=""
+              />
 
-              <span class="plant-name">Tomat</span>
-              <span class="plant-date">1 april 2024</span>
-              <span class="plant-footer">Jocke</span>
+              <h3 class="plant-card__name">Tomat</h3>
+              <time class="plant-card__date" datetime="2024-04-01"
+                >1 april 2024</time
+              >
+              <span class="plant-card__owner">Jocke</span>
 
-              <button class="delete-btn">
-                <img src="./assets/icons/bin.png" alt="" />
+              <button
+                class="plant-card__delete"
+                type="button"
+                aria-label="Ta bort Tomat"
+              >
+                <img src="./assets/icons/bin.png" alt=""  aria-hidden="true"/>
               </button>
             </li>
             <!-- Card #3 -->
-            <li class="listed_plant">
+            <li class="plant-card">
               <img
-                class="plant-img"
+                class="plant-card__img"
                 src="./assets/images/tomat.avif"
                 alt="Två röda körsbärstomater bland gröna blad, suddig bakgrund."
               />
-              <img class="plant-icon" src="../assets/icons/plant.svg" alt="" />
+              <img
+                class="plant-card__icon"
+                src="../assets/icons/plant.svg"
+                alt=""
+              />
 
-              <span class="plant-name">Tomat</span>
-              <span class="plant-date">1 april 2024</span>
-              <span class="plant-footer">Majvor och P-Å</span>
+              <h3 class="plant-card__name">Tomat</h3>
+              <time class="plant-card__date" datetime="2024-04-01"
+                >1 april 2024</time
+              >
+              <span class="plant-card__owner">Majvor och P-Å</span>
 
-              <button class="delete-btn">
-                <img src="./assets/icons/bin.png" alt="" />
+              <button
+                class="plant-card__delete"
+                type="button"
+                aria-label="Ta bort Tomat"
+              >
+                <img src="./assets/icons/bin.png" alt=""  aria-hidden="true"/>
               </button>
             </li>
             <!-- Card #4 -->
-            <li class="listed_plant">
+            <li class="plant-card">
               <img
-                class="plant-img"
+                class="plant-card__img"
                 src="./assets/images/ärta.avif"
                 alt="Gröna ärtskidor hängande på rankan."
               />
-              <img class="plant-icon" src="../assets/icons/plant.svg" alt="" />
+              <img
+                class="plant-card__icon"
+                src="../assets/icons/plant.svg"
+                alt=""
+              />
 
-              <span class="plant-name">Sockerärtor</span>
-              <span class="plant-date">15 april 2024</span>
-              <span class="plant-footer">Frippe</span>
+              <h3 class="plant-card__name">Sockerärtor</h3>
+              <time class="plant-card__date" datetime="2024-04-15"
+                >15 april 2024</time
+              >
+              <span class="plant-card__owner">Frippe</span>
 
-              <button class="delete-btn">
-                <img src="./assets/icons/bin.png" alt="" />
+              <button
+                class="plant-card__delete"
+                type="button"
+                aria-label="Ta bort Sockerärtor"
+              >
+                <img src="./assets/icons/bin.png" alt=""  aria-hidden="true"/>
               </button>
             </li>
             <!-- Card #5 -->
-            <li class="listed_plant">
+            <li class="plant-card">
               <img
-                class="plant-img"
+                class="plant-card__img"
                 src="./assets/images/lilagrönsak.avif"
                 alt="Vit-lila majrovor samlade i en trälåda."
               />
               <img
-                class="plant-icon"
+                class="plant-card__icon"
                 src="../assets/icons/plant.svg"
                 alt="plant icon"
               />
 
-              <span class="plant-name">Majrova</span>
-              <span class="plant-date">1 april 2024</span>
-              <span class="plant-footer">Emma på 4:an</span>
+              <h3 class="plant-card__name">Majrova</h3>
+              <time class="plant-card__date" datetime="2024-04-01"
+                >1 april 2024</time
+              >
+              <span class="plant-card__owner">Emma på 4:an</span>
 
-              <button class="delete-btn">
-                <img src="./assets/icons/bin.png" alt="" />
+              <button
+                class="plant-card__delete"
+                type="button"
+                aria-label="Ta bort Majrova"
+              >
+                <img src="./assets/icons/bin.png" alt=""  aria-hidden="true"/>
               </button>
             </li>
             <!-- Card #6 -->
-            <li class="listed_plant">
+            <li class="plant-card">
               <img
-                class="plant-img"
+                class="plant-card__img"
                 src="./assets/images/cloesupväxt.avif"
                 alt="Ung squashfrukt på ranka vid spaljé med gul blomma."
               />
-              <img class="plant-icon" src="../assets/icons/plant.svg" alt="" />
+              <img
+                class="plant-card__icon"
+                src="../assets/icons/plant.svg"
+                alt=""
+              />
 
-              <span class="plant-name">Squash</span>
-              <span class="plant-date">15 april 2024</span>
-              <span class="plant-footer">Perra J</span>
+              <h3 class="plant-card__name">Squash</h3>
+              <time class="plant-card__date" datetime="2024-04-15"
+                >15 april 2024</time
+              >
+              <span class="plant-card__owner">Perra J</span>
 
-              <button class="delete-btn">
-                <img src="./assets/icons/bin.png" alt="" />
+              <button
+                class="plant-card__delete"
+                type="button"
+                aria-label="Ta bort Squash"
+              >
+                <img src="./assets/icons/bin.png" alt=""  aria-hidden="true"/>
               </button>
             </li>
           </ul>
-        </nav>
+        </section>
 
-        <a class="btn" id="no-cap" href="#">Visa fler</a>
+        <a class="button" id="button--secondary" href="#">Visa fler</a>
 
-        <!-- Third content block -->
-        <section class="flow-box-second">
-          <section class="feature-second" aria-labelledby="feature-title">
-            <div class="feature__content-second">
-              <figure class="green-circle" aria-hidden="true">
-                <img
-                  class="green-vector"
-                  src="./assets/icons/plant.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </figure>
-              <h2 id="feature__title-second">Våra tidigare odlingar</h2>
-              <p class="intro__text">
-                Våren är äntligen här i kollektivet!<br />
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-                blanditiis, earum assumenda voluptatibus quaerat sunt nulla modi
-                laudantium?
-              </p>
-              <a class="btn" href="#">Planterade plantor</a>
-            </div>
-          </section>
+        <!-- Content #2 -->
+        <section class="feature-second">
+          <div class="feature__content-second">
+            <figure class="feature__circle" aria-hidden="true">
+              <img
+                class="feature__circle-icon"
+                src="./assets/icons/plant.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </figure>
+            <h2>Våra tidigare odlingar</h2>
+            <p class="feature__text">
+              Våren är äntligen här i kollektivet!<br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+              blanditiis, earum assumenda voluptatibus quaerat sunt nulla modi
+              laudantium?
+            </p>
+            <a class="button" href="#">Planterade plantor</a>
+          </div>
         </section>
       </main>
 
-      <!-- Footer with image and contact information -->
+      <!-- FOOTER -->
       <footer class="container">
-        <section class="footer" aria-labelledby="contact-title">
+        <section class="site-footer">
           <img
-            class="footer__photo"
+            class="site-footer__photo"
             src="./assets/images/handsidan.avif"
             alt="Hand sträcks mot små plantor i jord."
           />
           <img
-            class="contact__logo"
+            class="site-footer__logo"
             src="./assets/icons/Logo.svg"
             alt=""
             aria-hidden="true"
           />
 
-          <h2 id="contact-title" class="contact__title">Vi hörs!</h2>
+          <h2 class="site-footer__title">Vi hörs!</h2>
 
-          <address class="contact__info">
-            <a class="contact__link" href="tel:0701234567"
-              ><img class="contact__icon" src="./assets/icons/telephone.svg" />
+          <address class="site-footer__contact">
+            <a class="site-footer__link" href="tel:0701234567"
+              ><img
+                class="site-footer__icon"
+                src="./assets/icons/telephone.svg"
+                alt=""
+                aria-hidden="true"
+              />
               0701-234567</a
             >
-            <a class="contact__link" href="mailto:mail@mail.se">
+            <a class="site-footer__link" href="mailto:mail@mail.se">
               mail@mail.se<img
-                class="contact__icon"
+                class="site-footer__icon"
                 src="./assets/icons/envelope.svg"
+                alt=""
+                aria-hidden="true"
             /></a>
           </address>
         </section>
 
         <!-- Scroll-to-top link (for now link to mypage.html) -->
-        <section class="scroll-up">
-          <a class="to-top" href="./mypage.html">Till toppen av sidan</a>
-        </section>
+        <p class="back-to-top">
+          <a class="back-to-top__link" href="./mypage.html"
+            >Till toppen av sidan</a
+          >
+        </p>
       </footer>
     </div>
   </body>
