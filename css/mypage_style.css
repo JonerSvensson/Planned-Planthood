@@ -54,50 +54,50 @@ body {
   height: 100%;
 }
 
-.grid-container {
+.page {
   display: grid;
   grid-template-areas:
     "header"
-    "new-plant"
-    "planned-plants"
-    "planted-plants"
+    "plant-form"
+    "plant-list--planned"
+    "plant-list--planted"
     "footer";
   gap: var(--gap);
 }
 
-.grid-container h3,
-.grid-container h4 {
+.page h3,
+.page h4 {
   font-weight: 600;
   font-size: clamp(1rem, 2.5vw, 2rem);
   text-align: center;
 }
 
-header {
+.site-header {
   grid-area: header;
 }
-.new-plant {
-  grid-area: new-plant;
+.plant-form {
+  grid-area: plant-form;
 }
-.planned-plants {
-  grid-area: planned-plants;
+.plant-list--planned {
+  grid-area: plant-list--planned;
 }
-.planted-plants {
-  grid-area: planted-plants;
+.plant-list--planted {
+  grid-area: plant-list--planted;
 }
-footer {
+.site-footer {
   grid-area: footer;
 }
 
 /* == Header ==*/
 
-.header {
+.site-header {
   position: relative;
   width: 100%;
   min-height: 360px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
 }
-.header-bg {
+.site-header__background {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -107,21 +107,20 @@ footer {
   left: 0;
   z-index: 0;
 }
-.logo {
+.site-header__logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-.header nav {
+.nav {
   position: absolute;
   z-index: 1;
   cursor: pointer;
 }
-.header h1 {
+.site-header__title {
   position: absolute;
-  bottom: 2rem;
   left: 50%;
   bottom: 4%;
   transform: translateX(-50%);
@@ -131,7 +130,7 @@ footer {
   font-weight: 500;
   font-family: var(--font-title);
 }
-.main-nav {
+.nav {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -139,16 +138,16 @@ footer {
   font-weight: 500;
   font-size: 20px;
 }
-.full-menu {
+.nav__menu {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.full-menu li {
+.nav__menu-item {
   display: inline-block;
 }
-.burger-menu {
+.nav__toggle {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -157,27 +156,27 @@ footer {
 
 /* == Forms / add new plant ==*/
 
-.new-plant {
+.plant-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.new-plant h2 {
+.plant-form__title {
   text-align: center;
   font-weight: 300;
 }
-.new-plant form {
+.plant-form__form {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   width: 100%;
   max-width: 400px;
 }
-.new-plant label {
+.plant-form__label {
   margin-bottom: -0.75rem;
   font-weight: 200;
 }
-.input-box {
+.plant-form__input {
   padding: 0.5rem;
   border: none;
   border-radius: 6px;
@@ -186,7 +185,7 @@ footer {
   box-sizing: border-box;
   box-shadow: var(--box-shadow);
 }
-.new-plant button {
+.plant-form__submit {
   display: block;
   margin: auto;
   margin-top: 0.5rem;
@@ -208,13 +207,13 @@ footer {
 
 #planta2,
 #datum2,
-#label-planta2,
-#label-datum2 {
+label[for="planta2"],
+label[for="datum2"] {
   display: none;
 }
+
 /* == Listed Plants ==*/
-.planned-plants ul,
-.planted-plants ul {
+.plant-list__items {
   padding: var(--gap);
   display: flex;
   justify-content: start;
@@ -224,7 +223,7 @@ footer {
   max-width: 500px;
 }
 
-.listed_plant {
+.plant-list__item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 70% 12% 18%;
@@ -238,7 +237,7 @@ footer {
   box-shadow: var(--box-shadow);
   position: relative;
 }
-.plant-img {
+.plant-list__image {
   grid-area: img;
 
   width: 100%;
@@ -246,7 +245,7 @@ footer {
   object-fit: cover;
   display: block;
 }
-.plant-icon {
+.plant-list__icon {
   display: none;
   position: absolute;
   top: 35%;
@@ -256,7 +255,7 @@ footer {
   height: auto;
   z-index: 2;
 }
-.plant-name {
+.plant-list__name {
   grid-area: name;
 
   align-self: end;
@@ -264,7 +263,7 @@ footer {
 
   font-weight: 600;
 }
-.plant-date {
+.plant-list__date {
   grid-area: date;
 
   white-space: nowrap;
@@ -275,7 +274,7 @@ footer {
   font-size: 0.8rem;
   font-weight: 700;
 }
-.plant-footer {
+.plant-list__owner {
   grid-area: footer;
 
   align-self: flex-end;
@@ -287,7 +286,7 @@ footer {
 
   font-size: 0.8rem;
 }
-.delete-btn {
+.plant-list__delete-btn {
   grid-area: delete;
 
   align-self: end;
@@ -299,21 +298,21 @@ footer {
 
   font-weight: 300;
 }
-.delete-btn img {
+.plant-list__delete-btn img {
   width: 20px;
   height: 20px;
   display: block;
 }
-.edit-btn {
+.plant-list__edit-btn {
   display: none;
 }
 
 /* == Footer ==*/
 
-footer {
+.site-footer {
   text-align: center;
 }
-footer figure {
+.site-footer__gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -324,13 +323,13 @@ footer figure {
   padding: var(--gap);
 }
 
-footer figure img {
+.site-footer__gallery-image {
   opacity: 73%;
   width: 100%;
   height: clamp(90px, 20vw, 277px);
   object-fit: cover;
 }
-footer h5 {
+.site-footer__back {
   font-weight: 300;
   cursor: pointer;
 }
@@ -343,7 +342,7 @@ footer h5 {
   }
 
   /* == Navbar ==*/
-  .main-nav {
+  .nav {
     position: fixed;
     height: 60px;
     background-color: white;
@@ -353,17 +352,17 @@ footer h5 {
     z-index: 2;
     box-shadow: var(--box-shadow);
   }
-  .burger-menu {
+  .nav__toggle {
     display: none;
   }
-  .full-menu {
+  .nav__menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
   }
-  .full-menu li a {
+  .nav__link {
     text-decoration: none;
     color: var(--nav-green);
     font-weight: 500;
@@ -371,7 +370,7 @@ footer h5 {
   }
 
   /* == Add new plant ==*/
-  .new-plant form {
+  .plant-form__form {
     max-width: 100%;
     padding: 1rem;
     display: grid;
@@ -385,7 +384,7 @@ footer h5 {
       "planta2 datum2"
       "submit submit";
   }
-  .new-plant h2 {
+  .plant-form__title {
     grid-area: titel;
     text-align: left;
     margin-left: var(--gap);
@@ -396,10 +395,10 @@ footer h5 {
   #datum1 {
     grid-area: datum1;
   }
-  #label-planta2 {
+  label[for="planta2"] {
     display: block;
   }
-  #submit-planta {
+  .plant-form__submit {
     display: block;
     grid-area: submit;
   }
@@ -407,7 +406,7 @@ footer h5 {
     display: block;
     grid-area: planta2;
   }
-  #label-datum2 {
+  label[for="datum2"] {
     display: block;
   }
   #datum2 {
@@ -416,18 +415,17 @@ footer h5 {
   }
 
   /* == ALL Listed Plants ==*/
-  .planned-plants ul,
-  .planted-plants ul {
+  .plant-list__items {
     max-width: 1000px;
   }
-  .listed_plant {
+  .plant-list__item {
     width: clamp(12rem, 18vw, 16rem);
     height: clamp(15rem, 23vw, 20rem);
   }
-  .plant-icon {
+  .plant-list__icon {
     display: block;
   }
-  .delete-btn {
+  .plant-list__delete-btn {
     background-color: var(--btn-red);
     color: white;
     font-weight: 700;
@@ -441,15 +439,15 @@ footer h5 {
     padding-left: clamp(0.2rem, 0.8vw, 0.6rem);
     padding-right: clamp(0.2rem, 0.8vw, 0.6rem);
   }
-  .delete-btn img {
+  .plant-list__delete-btn img {
     display: none;
   }
-  .delete-btn::after {
+  .plant-list__delete-btn::after {
     content: "TA BORT";
   }
 
   /* == Planned Plants ==*/
-  .planned-plants .listed_plant {
+  .plant-list--planned .plant-list__item {
     grid-template-rows: 70% auto auto auto;
     grid-template-areas:
       "img img"
@@ -458,7 +456,7 @@ footer h5 {
       "footer delete";
     height: 22rem;
   }
-  .planned-plants .edit-btn {
+  .plant-list--planned .plant-list__edit-btn {
     grid-area: edit;
     display: block;
     justify-self: flex-end;
@@ -478,11 +476,11 @@ footer h5 {
   }
 
   /* == Footer ==*/
-  footer figure {
+  .site-footer__gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
-  footer figure img {
+  .site-footer__gallery-image {
     min-height: 90px;
   }
 }

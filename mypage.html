@@ -6,158 +6,104 @@
     <title>Planned Planthood | Min Sida</title>
     <link rel="stylesheet" href="./css/mypage_style.css" />
     <link
-      href="https://fonts.googleapis.com/css2
-                ?family=Lato:wght@300;400;600;700
-                &family=Maven+Pro:wght@400;600;700
-                &family=Open+Sans:wght@400;600;700
-                &display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Maven+Pro:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Grid that contains the whole page "header" | "new-plant" | "planned-plants" | "planted-plants" | "footer" -->
-    <div class="grid-container">
-      <!-- Navbar & header picture/logo -->
-      <header class="header">
+    <div class="page">
+      <!-- Header -->
+      <header class="site-header">
         <img
-          class="header-bg"
+          class="site-header__background"
           src="./assets/images/handsidan.avif"
           alt="hand reaching down to touch the leaves of a small plant on the ground"
         />
-        <img class="logo" src="./assets/icons/Logo.svg" alt="Vector made logo of the website" />
+        <img class="site-header__logo" src="./assets/icons/Logo.svg" alt="Logo" />
 
-        <nav class="main-nav">
-          <!-- Small menu for smaller screens -->
+        <nav class="nav">
           <img
-            class="burger-menu"
+            class="nav__toggle"
             src="./assets/icons/burgir.svg"
-            alt="vector made burger menu for navigation"
+            alt="burger menu"
           />
 
-          <!-- Expanded navbar for wider screens -->
-          <ul class="full-menu">
-            <li><a href="#">PLANER</a></li>
-            <li><a href="#">HISTORIK</a></li>
-            <li><a href="#">TIPS</a></li>
-            <li><a href="#">LOGGA UT</a></li>
+          <ul class="nav__menu">
+            <li class="nav__menu-item"><a class="nav__link" href="#">PLANER</a></li>
+            <li class="nav__menu-item"><a class="nav__link" href="#">HISTORIK</a></li>
+            <li class="nav__menu-item"><a class="nav__link" href="#">TIPS</a></li>
+            <li class="nav__menu-item"><a class="nav__link" href="#">LOGGA UT</a></li>
           </ul>
         </nav>
 
-        <h1>Mina sidor</h1>
+        <h1 class="site-header__title">Mina sidor</h1>
       </header>
 
-      <!-- Forms to add new plants -->
-      <main class="new-plant">
-        <h2>Lägg till ny plantering:</h2>
+      <!-- New Plant Form -->
+      <main class="plant-form">
+        <h2 class="plant-form__title">Lägg till ny plantering:</h2>
 
-        <form action="/add" method="post">
-          <label id="label-planta1" for="planta1">Planta:</label>
-          <input class="input-box" type="text" id="planta1" name="planta1" />
+        <form class="plant-form__form" action="/add" method="post">
+          <label class="plant-form__label" for="planta1">Planta:</label>
+          <input class="plant-form__input" type="text" id="planta1" name="planta1" />
 
-          <label id="label-planta2" for="planta2">Planta:</label>
-          <input class="input-box" type="text" id="planta2" name="planta2" />
+          <label class="plant-form__label" for="planta2">Planta:</label>
+          <input class="plant-form__input" type="text" id="planta2" name="planta2" />
 
-          <label id="label-datum1" for="datum1">Datum:</label>
-          <input class="input-box" type="text" id="datum1" name="datum1" />
+          <label class="plant-form__label" for="datum1">Datum:</label>
+          <input class="plant-form__input" type="text" id="datum1" name="datum1" />
 
-          <label id="label-datum2" for="datum2">Datum:</label>
-          <input class="input-box" type="text" id="datum2" name="datum2" />
+          <label class="plant-form__label" for="datum2">Datum:</label>
+          <input class="plant-form__input" type="text" id="datum2" name="datum2" />
 
-          <button id="submit-planta" type="submit">LÄGG TILL</button>
+          <button class="plant-form__submit" type="submit">LÄGG TILL</button>
         </form>
       </main>
 
-      <!-- Navigation to browse upcoming planned plants -->
-      <nav class="planned-plants">
-        <h3>Dina planerade planteringar:</h3>
-
-        <ul>
-          <li class="listed_plant">
-            <img
-              class="plant-img"
-              src="./assets/images/gurka.avif"
-              alt="Two cucumbers on top of dirt with a yellow flower in the foreground"
-            />
-            <img
-              class="plant-icon"
-              src="./assets/icons/plant.svg"
-              alt="vector made plant in a pot icon"
-            />
-
-            <span class="plant-name">Gurka</span>
-            <span class="plant-date">15 april 2024</span>
-            <span class="plant-footer">Rico Coolio</span>
-
-            <button class="edit-btn">ÄNDRA</button>
-
-            <!-- Uses icon instead of text on smaller devices -->
-            <button class="delete-btn">
-              <img src="./assets/icons/trashcan.svg" alt="Vector made icon of a trashcan" />
+      <!-- Planned Plants -->
+      <nav class="plant-list plant-list--planned">
+        <h3 class="plant-list__title">Dina planerade planteringar:</h3>
+        <ul class="plant-list__items">
+          <li class="plant-list__item">
+            <img class="plant-list__image" src="./assets/images/gurka.avif" alt="cucumbers" />
+            <img class="plant-list__icon" src="./assets/icons/plant.svg" alt="plant icon" />
+            <span class="plant-list__name">Gurka</span>
+            <span class="plant-list__date">15 april 2024</span>
+            <span class="plant-list__owner">Rico Coolio</span>
+            <button class="plant-list__edit-btn">ÄNDRA</button>
+            <button class="plant-list__delete-btn">
+              <img src="./assets/icons/trashcan.svg" alt="trashcan" />
             </button>
           </li>
         </ul>
       </nav>
 
-      <!-- Navigation to browse already planted plants -->
-      <nav class="planted-plants">
-        <h4>Dina planterade planteringar:</h4>
-        <ul>
-          <li class="listed_plant">
-            <img
-              class="plant-img"
-              src="./assets/images/gurka.avif"
-              alt="Two cucumbers on top of dirt with a yellow flower in the foreground"
-            />
-            <img
-              class="plant-icon"
-              src="./assets/icons/plant.svg"
-              alt="vector made plant in a pot icon"
-            />
-
-            <span class="plant-name">Gurka</span>
-            <span class="plant-date">15 april 2024</span>
-            <span class="plant-footer">Rico Coolio</span>
-
-            <!-- Uses icon instead of text on smaller devices -->
-            <button class="delete-btn">
-              <img src="./assets/icons/trashcan.svg" alt="Vector made icon of a trashcan" />
-            </button>
-          </li>
-
-          <li class="listed_plant">
-            <img
-              class="plant-img"
-              src="./assets/images/gurka.avif"
-              alt="Two cucumbers on top of dirt with a yellow flower in the foreground"
-            />
-            <img
-              class="plant-icon"
-              src="./assets/icons/plant.svg"
-              alt="vector made plant in a pot icon"
-            />
-
-            <span class="plant-name">Gurka</span>
-            <span class="plant-date">15 april 2024</span>
-            <span class="plant-footer">Rico Coolio</span>
-
-            <!-- Uses icon instead of text on smaller devices -->
-            <button class="delete-btn">
-              <img src="./assets/icons/trashcan.svg" alt="Vector made icon of a trashcan" />
+      <!-- Planted Plants -->
+      <nav class="plant-list plant-list--planted">
+        <h4 class="plant-list__title">Dina planterade planteringar:</h4>
+        <ul class="plant-list__items">
+          <li class="plant-list__item">
+            <img class="plant-list__image" src="./assets/images/gurka.avif" alt="cucumbers" />
+            <img class="plant-list__icon" src="./assets/icons/plant.svg" alt="plant icon" />
+            <span class="plant-list__name">Gurka</span>
+            <span class="plant-list__date">15 april 2024</span>
+            <span class="plant-list__owner">Rico Coolio</span>
+            <button class="plant-list__delete-btn">
+              <img src="./assets/icons/trashcan.svg" alt="trashcan" />
             </button>
           </li>
         </ul>
       </nav>
 
-      <footer>
-        <!-- small gallery in the footer -->
-        <figure>
-          <img src="./assets/images/plockar.avif" alt="Man picking yellow bell peppers from a bush, walking towards camera" />
-          <img src="./assets/images/vattenkanna.avif" alt="close up of water pouring down from watering can into small plants in the ground" />
-          <img src="./assets/images/massagrönsaker.avif" alt="Piles of different kinds of vegetables were carrots are the most noticeable" />
-          <img src="./assets/images/tjejmedhatt.avif" alt="Woman smiling into camera with farmer in the background picking grapes" />
+      <!-- Footer -->
+      <footer class="site-footer">
+        <figure class="site-footer__gallery">
+          <img class="site-footer__gallery-image" src="./assets/images/plockar.avif" alt="Man picking peppers" />
+          <img class="site-footer__gallery-image" src="./assets/images/vattenkanna.avif" alt="Watering plants" />
+          <img class="site-footer__gallery-image" src="./assets/images/massagrönsaker.avif" alt="Various vegetables" />
+          <img class="site-footer__gallery-image" src="./assets/images/tjejmedhatt.avif" alt="Woman smiling" />
         </figure>
-        
-        <h5><a href="./index.html">Till toppen av sidan</h5></a>
+        <h5 class="site-footer__back"><a href="./index.html">Till toppen av sidan</a></h5>
       </footer>
     </div>
   </body>
